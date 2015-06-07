@@ -1,0 +1,11 @@
+*.swp
+*.py[cod]
+*.o
+*.so
+*.a
+
+__pycache__/
+node_modules/
+
+._*
+*~
