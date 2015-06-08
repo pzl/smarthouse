@@ -24,14 +24,9 @@ ICON_URL="http://forecast.weather.gov/images/wtf/medium/%(img)s"
 
 def main():
 
-    white = ovg.Color(255,255,255,255)
-    black = ovg.Color(0,0,0,255)
     ovg.open(0,0,300,300)
-    ovg.fill(white)
-    bg = ovg.draw_path(ovg.rect(0,0,300,300), ovg.PaintMode.Fill)
+    ovg.clear()
     
-
-    ovg.fill(black)
     ovg.text(20,150,"Fetching Data...",15)
     
     ovg.draw()
@@ -49,10 +44,6 @@ def main():
 
 
     ovg.clear()
-    ovg.fill(white)
-    ovg.draw_path(bg, ovg.PaintMode.Fill)
-
-    ovg.fill(black)
     ovg.text(10,290,"%s F, %s" % (data['currentobservation']['Temp'], data['currentobservation']['Weather']),12)
     ovg.text(10,275,data['location']['areaDescription'],12)
 
