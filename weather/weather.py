@@ -11,9 +11,9 @@ try:
 except ImportError:
     from . import coords_default as coords
     coords.default=True
+from .. import moduleBase
 
-
-class Weather(object):
+class Weather(moduleBase.Module):
     """Weather App object"""
 
 
@@ -33,8 +33,7 @@ class Weather(object):
         self.data = {}
 
     def open(self,x,y,w,h):
-        ovg.open(x,y,w,h)
-        ovg.clear()
+        super(Weather, self).open()
         ovg.text(20,int(h/2),"Fetching Data...",15)
         ovg.draw()
 
@@ -61,8 +60,6 @@ class Weather(object):
         ovg.draw()
 
 
-    def close(self):
-        ovg.cleanup()
 
 
 
