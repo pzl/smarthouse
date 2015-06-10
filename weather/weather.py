@@ -1,6 +1,8 @@
-#!/usr/bin/env python2
-
-import urllib2
+#!/usr/bin/env python
+try:
+    import urllib2
+except ImportError:
+    import urllib.request as urllib2
 import sys
 import json
 import ovg
