@@ -1,1 +1,1 @@
-from . import weather
+from .weather import Weather
