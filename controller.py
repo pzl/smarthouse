@@ -10,9 +10,13 @@ def main():
 	w.fetch()
 	w.update()
 
+	c = Clock()
+	c.open(320,0,250,20)
+
 	sys.stdin.read(1)
 
 	w.close()
+	c.stop()
 
 
 if __name__ == "__main__":
