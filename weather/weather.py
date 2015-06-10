@@ -7,9 +7,9 @@ import sys
 import json
 import ovg
 try:
-    import coords
-except:
-    import coords_default as coords
+    from . import coords
+except ImportError:
+    from . import coords_default as coords
     coords.default=True
 
 WEATHER_API="http://forecast.weather.gov/MapClick.php?lat=%(lat)s&lon=%(lon)s&unit=0&lg=english&FcstType=%(type)s"
