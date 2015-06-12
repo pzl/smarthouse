@@ -20,4 +20,8 @@ def main():
 
 
 if __name__ == "__main__":
-	main()
+	#main()
+	c = Calendar()
+	c.open(0,0,500,300)
+	c.update()
+	sys.stdin.read(1)
