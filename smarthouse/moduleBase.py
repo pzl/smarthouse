@@ -18,4 +18,4 @@ class Module(object):
 
 
 	def close(self):
-		ovg.cleanup()
+		ovg.close()
