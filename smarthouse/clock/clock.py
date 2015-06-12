@@ -25,13 +25,16 @@ class Clock(moduleBase.Module):
 
 	def _begin(self,x,y,w,h):
 		super(Clock,self).open(x,y,w,h)
+		ovg.clear_color(255,255,255,255)
+		ovg.clear()
+		self.f = ovg.create_font()
 		self._update()
 
 	def _update(self):
 		start = time.time()
 
 		ovg.clear()
-		ovg.text(5,5,"{:%I:%M:%S %p %a, %b %d}".format(datetime.datetime.now()),12)
+		ovg.text(5,5,self.f,"{:%I:%M:%S %p %a, %b %d}".format(datetime.datetime.now()),12)
 		ovg.draw()
 
 		if self.run:
