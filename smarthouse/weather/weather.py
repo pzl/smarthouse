@@ -24,6 +24,9 @@ class Weather(moduleBase.Module):
             json
             xml
             kml
+            text (with TextType 1 or 2)
+            graphical
+            digital
     """
 
     def open(self,x,y,w,h):
